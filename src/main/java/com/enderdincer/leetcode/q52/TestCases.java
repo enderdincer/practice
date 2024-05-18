@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestCases {
 
-    private static Stream<Arguments> queenNumToSolutionParams() {
+    private static Stream<Arguments> solutionParams() {
         return Stream.of(
                 Arguments.of(1, 1),
                 Arguments.of(2, 0),
@@ -23,7 +23,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q52.TestCases#queenNumToSolutionParams")
+    @MethodSource("com.enderdincer.leetcode.q52.TestCases#solutionParams")
     void totalNQueens(int boardSize, int solution) {
         final var result = new Solution().totalNQueens(boardSize);
         assertThat(result).isEqualTo(solution);

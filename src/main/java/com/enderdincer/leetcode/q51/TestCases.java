@@ -1,6 +1,5 @@
 package com.enderdincer.leetcode.q51;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestCases {
 
-    private static Stream<Arguments> queenNumToSolutionParams() {
+    private static Stream<Arguments> solutionParams() {
         return Stream.of(
                 Arguments.of(1, List.of(List.of("Q"))),
                 Arguments.of(2, List.of()),
@@ -85,7 +84,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q51.TestCases#queenNumToSolutionParams")
+    @MethodSource("com.enderdincer.leetcode.q51.TestCases#solutionParams")
     void nQueens(int boardSize, List<List<String>> solution) {
         final var result = new Solution().solveNQueens(boardSize);
         assertThat(result).containsExactlyInAnyOrderElementsOf(solution);
