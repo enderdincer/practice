@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestCases {
+public class Q52Test {
 
     private static Stream<Arguments> solutionParams() {
         return Stream.of(
@@ -23,7 +23,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q52.TestCases#solutionParams")
+    @MethodSource("com.enderdincer.leetcode.q52.Q52Test#solutionParams")
     void totalNQueens(int boardSize, int solution) {
         final var result = new Solution().totalNQueens(boardSize);
         assertThat(result).isEqualTo(solution);

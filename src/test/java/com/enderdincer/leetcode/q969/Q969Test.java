@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestCases {
+public class Q969Test {
 
     private static Stream<Arguments> solutionParams() {
         return Stream.of(
@@ -19,7 +19,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q969.TestCases#solutionParams")
+    @MethodSource("com.enderdincer.leetcode.q969.Q969Test#solutionParams")
     void pancakeSort(int[] nums) {
         final var given = Arrays.copyOf(nums, nums.length);
         System.out.println("Given:" + Arrays.toString(nums));

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestCases {
+public class Q51Test {
 
     private static Stream<Arguments> solutionParams() {
         return Stream.of(
@@ -84,7 +84,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q51.TestCases#solutionParams")
+    @MethodSource("com.enderdincer.leetcode.q51.Q51Test#solutionParams")
     void nQueens(int boardSize, List<List<String>> solution) {
         final var result = new Solution().solveNQueens(boardSize);
         assertThat(result).containsExactlyInAnyOrderElementsOf(solution);

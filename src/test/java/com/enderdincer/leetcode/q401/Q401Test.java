@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestCases {
+public class Q401Test {
 
     private static Stream<Arguments> solutionParams() {
         return Stream.of(
@@ -22,7 +22,7 @@ public class TestCases {
     }
 
     @ParameterizedTest
-    @MethodSource("com.enderdincer.leetcode.q401.TestCases#solutionParams")
+    @MethodSource("com.enderdincer.leetcode.q401.Q401Test#solutionParams")
     void readBinaryWatch1(int turnedOnLedNum, List<String> solution) {
         final var result = new Solution1().readBinaryWatch(turnedOnLedNum);
         assertThat(result).containsExactlyInAnyOrderElementsOf(solution);
